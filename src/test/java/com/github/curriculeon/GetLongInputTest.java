@@ -35,12 +35,12 @@ public class GetLongInputTest {
         test("-9223372036854775808", Long.MIN_VALUE);
     }
 
-    @Test(expected=NoSuchElementException.class)
+    @Test(expected=NumberFormatException.class)
     public void test6() {
         test("1.1", 1L);
     }
 
-    @Test(expected=NoSuchElementException.class)
+    @Test(expected=NumberFormatException.class)
     public void test7() {
         test("_", null);
     }

@@ -49,13 +49,14 @@ public class GetStringInputTest {
     private void test(String input) {
         // Given
         String expected = input;
+
         this.console = getConsoleWithBufferedInput(input);
 
         // When
         String actual = console.getStringInput("");
-
+        System.out.println("Actual  "+ actual);
         // Then
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 
     private IOConsole getConsoleWithBufferedInput(String inputString) {
